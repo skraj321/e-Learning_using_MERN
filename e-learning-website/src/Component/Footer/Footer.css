@@ -1,0 +1,18 @@
+.footer-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer {
+    width: 100%;
+    flex-shrink: 0;
+    padding-top: 20px; /* Adjust as needed */
+    padding-bottom: 20px; /* Adjust as needed */
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  .social-link {
+    color: white !important; /* Override link color */
+  }
+  

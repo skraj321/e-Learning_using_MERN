@@ -1,0 +1,48 @@
+.user-profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightpink;
+    
+    height: 100vh;
+  }
+  
+  .card-content {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 80px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    background-image: url("/public/cimg.jpg");
+  }
+  .card-content h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .card-content p {
+    
+    color: #504e4e;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .logout-button {
+    background-color: #1e00ff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px 16px;
+    transition: background-color 0.3s;
+    margin-top: 16px;
+  }
+  
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
+  

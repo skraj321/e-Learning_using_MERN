@@ -1,0 +1,10 @@
+.signIn-container {
+    background-image: url("/public/sign-in.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+  }
+  .sign-container1 {
+    padding: 100px;
+  }

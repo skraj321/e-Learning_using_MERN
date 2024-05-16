@@ -1,0 +1,143 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    
+  }
+  .video-content {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: lavender;
+    /* background-image: url("/public/cimg.jpg"); */
+  }
+  .video-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+  }
+  .video {
+    
+    width: 860px;
+    height: 430px;
+  }
+  .content {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 50px;
+    margin: 20px auto;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px 5px black;
+  }
+  .content-text {
+    max-width: 860px; /* Match the width of the video */
+    text-align: left; /* Align text to the left */
+    margin-top: 50px;
+    font-size: 25px;
+    text-align: justify;
+  }
+  
+  .card-info {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .info-item {
+    margin-right: 20px;
+  }
+  
+  .info-label {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .divider {
+    border-left: 1px solid #ccc;
+    height: auto;
+    margin: 0 15px;
+  }
+  .info {
+    color: brown;
+    font-size: 22px;
+    padding: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid black;
+   
+  }
+  .info:hover {
+    background-color: cornflowerblue;
+    color: white;
+  }
+  .info-value {
+    color: rgb(2, 24, 24);
+    font-size: 22px;
+    margin-top: 20px;
+    
+    font-weight: 500;
+  }
+  .info-value1 {
+    color: rgb(4, 12, 1);
+    font-size: 22px;
+    margin-top: 25px;
+    font-weight: 500;
+    
+  }
+  
+  .rating-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .rating{
+    display: flex;
+    align-items: center;
+    
+    
+  }
+  .rating-box {
+    width: fit-content;
+    text-align: center;
+    padding: 10px;
+    background-color: bisque;
+    
+    
+   
+    
+    
+  }
+  
+  
+  .rating-text{
+    padding: 30px;
+    font-size: 20px;
+    
+    
+  }
+  .rating-summary {
+    padding-left: 100px;
+    
+  }
+  
+  .rating-number {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+    text-align: center;
+  }
+  .rating-summary p {
+    color: black;
+    font-size: 20px;
+    padding-left: 50px;
+  }

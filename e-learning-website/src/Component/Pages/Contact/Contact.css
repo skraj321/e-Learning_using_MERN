@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.get-in {
+  font-size: 25px;
+  text-align: justify;
+}
+
+.address,
+.mail,
+.phone {
+  padding: 5px;
+}
+
+.social-media h3 {
+  padding: 20px;
+}
+.touch-container {
+  display: flex;
+}
+.touch {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: bisque;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.cont-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  flex-direction: column;
+  width: 40%;
+}
+
+.contact-container {
+  padding: 20px;
+  background-color: burlywood;
+  margin: 28px;
+}
+.contact-form-container {
+  padding: 2rem;
+  flex: 1;
+  box-shadow: 0px 0px 10px rgba(152, 114, 114, 0.1);
+}
+
+.send-button {
+  margin-top: 1rem;
+}
+.icons:hover {
+  color: black;
+  background-color: cadetblue;
+  box-shadow: 0px 5px 10px 15px cadetblue;
+}

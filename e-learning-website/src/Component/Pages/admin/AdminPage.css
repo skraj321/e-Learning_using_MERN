@@ -1,0 +1,53 @@
+/* AdminPage.css */
+
+.adminpage {
+  height: 650px;
+  background-color: #007bff;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.adminContain {
+  background-color: #c27158;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+  margin: 20px;
+}
+
+.adm {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 5px; /* Add margin to top */
+}
+
+.admin-p {
+  list-style: none;
+  padding: 25px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.admin-p li {
+  margin: 0 15px;
+}
+
+.admin-p li a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.admin-p li a:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
