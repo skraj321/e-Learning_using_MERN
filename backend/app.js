@@ -18,6 +18,12 @@ const PORT=3800;
 app.set("view engine","ejs");
 app.use(express.json());
 app.use(cookieParser());
+app.get("/",(req,res)=>{
+    res.send({
+        activeStatus: true,
+        error:false,
+    })
+})
 app.use("/user",authRouter);
 app.use("/course",courseRouter);
 app.use("/payment",paymentRouter);
