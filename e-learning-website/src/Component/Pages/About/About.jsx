@@ -206,7 +206,7 @@ const About = () => {
                 className="profile-image"
                 src="hc.jpg"
                 alt="Profile Image"
-              />
+            />
               <div className="name">Mr. Shubham</div>
               <div className="expert">Java Development Instructor</div>
               <div className="social">
