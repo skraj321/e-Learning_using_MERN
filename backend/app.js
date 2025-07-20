@@ -12,7 +12,8 @@ const courseRouter=require("./routes/courserouter");
 const paymentRouter=require("./routes/paymentrouter");
 const auth=require("./middleware/authMid")
 app.use(cors({
-    origin: ["http://localhost:3000", "https://e-learning-website-using-mern.netlify.app"]
+    origin: ["http://localhost:3000", "https://e-learning-webapp-using-mern.netlify.app"],
+    credentials: true
 }))
 const PORT=3800;
 app.set("view engine","ejs");
