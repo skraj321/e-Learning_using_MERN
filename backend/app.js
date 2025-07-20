@@ -11,18 +11,18 @@ const authRouter=require("./routes/userrouter");
 const courseRouter=require("./routes/courserouter");
 const paymentRouter=require("./routes/paymentrouter");
 const auth=require("./middleware/authMid")
-
-app.use(cors())
-
+app.use(cors({
+    origin: ["http://localhost:3000", "https://e-learning-website-using-mern.netlify.app"]
+}))
 const PORT=3800;
 app.set("view engine","ejs");
 app.use(express.json());
 app.use(cookieParser());
 app.get("/",(req,res)=>{
     res.send({
-        activeStatus: true,
-        error:false,
-    })
+        activeStatus : true,
+        error: false ,
+       })
 })
 app.use("/user",authRouter);
 app.use("/course",courseRouter);
