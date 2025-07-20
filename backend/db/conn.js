@@ -1,8 +1,12 @@
-const mongoose=require("mongoose");
-mongoose.connect("mongodb://localhost:27017/ELearning")
-.then(()=>{
-    console.log("connected")
-})
-.catch((e)=>{
-    console.log("no conection")
-})
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+const uri = process.env.MONGODB_URI;
+
+mongoose.connect(uri)
+  .then(() => {
+    console.log("Connected to MongoDB");
+  })
+  .catch((e) => {
+    console.log("Connection failed", e);
+  });

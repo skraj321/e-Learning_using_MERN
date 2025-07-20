@@ -135,7 +135,7 @@ const About = () => {
                 alt="Profile Image"
               />
               <div className="name">Mr. Saheb</div>
-              <div className="expert">Web Development Instructor</div>
+              <div className="expert">MERN Development Instructor</div>
               <div className="social">
                 <Link href="https://www.facebook.com/" color="inherit">
                   <Facebook />
@@ -160,7 +160,7 @@ const About = () => {
                 alt="Profile Image"
               />
               <div className="name">Mr. Raghav</div>
-              <div className="expert">Java Development Instructor</div>
+              <div className="expert">Web Development Instructor</div>
               <div className="social">
                 <Link href="https://www.facebook.com/" color="inherit">
                   <Facebook />
@@ -208,7 +208,7 @@ const About = () => {
                 alt="Profile Image"
               />
               <div className="name">Mr. Shubham</div>
-              <div className="expert">MERN Development Instructor</div>
+              <div className="expert">Java Development Instructor</div>
               <div className="social">
                 <Link href="https://www.facebook.com/" color="inherit">
                   <Facebook />
