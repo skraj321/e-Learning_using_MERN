@@ -23,7 +23,7 @@ export const CourseDetails = () => {
       try {
         // Fetch course details based on the ID
         const response = await fetch(
-          `http://localhost:3800/course/getCourse/${id}`
+          `${process.env.REACT_APP_API_BASE_URL}/course/getCourse/${id}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch course details");

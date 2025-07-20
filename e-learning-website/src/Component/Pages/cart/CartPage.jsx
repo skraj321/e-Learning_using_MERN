@@ -22,7 +22,7 @@ export const CartPage = () => {
     const fetchCartData = async () => {
       try {
         const userId = localStorage.getItem("id"); // Assuming you store userId in localStorage
-        const response = await fetch("http://localhost:3800/user/user-cart", {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/user-cart`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -46,7 +46,7 @@ export const CartPage = () => {
   const removeFromCart = async (productId) => {
     try {
       const userId = localStorage.getItem("id");
-      const response = await fetch("http://localhost:3800/user/remove-from-cart", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/remove-from-cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ export const CartPage = () => {
 const handlePayment = async (totalAmount, title) => {
   try {
     const userId = localStorage.getItem("id");
-    const response = await fetch("http://localhost:3800/payment/orders", {
+    const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/payment/orders`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

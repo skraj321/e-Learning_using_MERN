@@ -21,7 +21,7 @@ export const AddCourse = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:3800/course/admin/addCourse",
+        `${process.env.REACT_APP_API_BASE_URL}/course/admin/addCourse`,
         {
           method: "POST",
           headers: {

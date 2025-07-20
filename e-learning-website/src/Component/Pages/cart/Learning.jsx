@@ -16,7 +16,7 @@ const Learning = () => {
         const userId = localStorage.getItem('id');
 
         // Make a POST request to fetch purchased courses after payment
-        const response = await fetch('http://localhost:3800/payment/purchased-courses', {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/payment/purchased-courses`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

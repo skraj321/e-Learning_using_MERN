@@ -16,7 +16,7 @@ export const UpdateCourse = () => {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await fetch(`http://localhost:3800/course/admin/getCourse/${id}`);
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/course/admin/getCourse/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch course");
         }

@@ -8,7 +8,7 @@ export const Ordered = () => {
   useEffect(() => {
     const fetchPaymentData = async () => {
       try {
-        const response = await fetch("http://localhost:3800/payment/ordered");
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/payment/ordered`);
         
         if (!response.ok) {
           throw new Error("Failed to fetch payment data");

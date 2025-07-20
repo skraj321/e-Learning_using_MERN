@@ -10,7 +10,7 @@ export const PrivateRoute = () => {
   useEffect(() => {
     const authCheck = async () => {
       try {
-        const response = await fetch("http://localhost:3800/user/user-auth", {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/user-auth`, {
           method: "GET",
           headers: {
             Authorization: `Bearer ${auth?.token}`,

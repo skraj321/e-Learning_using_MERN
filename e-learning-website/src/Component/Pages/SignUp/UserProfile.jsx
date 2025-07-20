@@ -13,7 +13,7 @@ const UserProfile = ({ userId }) => {
     const userId=localStorage.getItem("id");
     const fetchUserProfile = async () => {
       try {
-        const response = await fetch('http://localhost:3800/user/profile', {
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/user/profile`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

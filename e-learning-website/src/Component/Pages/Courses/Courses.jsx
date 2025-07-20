@@ -17,7 +17,7 @@ const Courses = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3800/course/getCourse");
+        const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/course/getCourse`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -41,7 +41,7 @@ const Courses = () => {
       console.log("Product Id:", productId);
       console.log("User Id:", userId);
 
-      fetch("http://localhost:3800/user/add-to-cart", {
+      fetch(`${process.env.REACT_APP_API_BASE_URL}/user/add-to-cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ const Courses = () => {
   const handlePayment = async (totalAmount, title) => {
     try {
       const userId = localStorage.getItem("id");
-      const response = await fetch("http://localhost:3800/payment/orders", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/payment/orders`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

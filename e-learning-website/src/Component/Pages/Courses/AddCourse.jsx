@@ -20,7 +20,7 @@ export const AddCourse = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:3800/course/addCourse", {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/course/addCourse`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
