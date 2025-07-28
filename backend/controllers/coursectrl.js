@@ -14,7 +14,7 @@ exports.addCourse=async(req,res)=>{
         res.status(201).json({msg: "saved"})
     }
     }catch(err){
-        res.status(500).send(err);
+        res.status(500).json(err);
     }
 }
 exports.getCourse=async(req,res)=>{
@@ -27,7 +27,7 @@ exports.getCourse=async(req,res)=>{
         }
 
     }catch(err){
-        res.status(500).send(err)
+        res.status(500).json(err)
     }
 }
 exports.singleCourse= async (req, res) => {

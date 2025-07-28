@@ -8,8 +8,6 @@ const users=require("../models/usermodel");
 
 
 
-
-
 router.post("/admin/addCourse",Coursectrl.addCourse);
 router.get("/admin/users",Coursectrl.viewUsers);
 router.delete('/admin/users/:userId',Coursectrl.deleteUser);
@@ -19,8 +17,6 @@ router.get("/admin/getCourse/:id",Coursectrl.adminCourse);
 router.patch("/admin/updateCourse/:id",Coursectrl.updateCourse);
 router.delete("/admin/deleteCourse/:id",Coursectrl.deleteCourse);
 
-
-//payment getway
 
 
 module.exports=router;

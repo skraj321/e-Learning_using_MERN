@@ -54,10 +54,6 @@ formDataSchema.methods.generateToken=async function(){
 
 }
 
-
-
-
-
 formDataSchema.pre("save",async function(next){
     if(this.isModified("password")){
         

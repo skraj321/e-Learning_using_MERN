@@ -47,20 +47,15 @@ module.exports.orders = async (req, res) => {
 
 // controllers/paymentctrl.js
 
-
-
 module.exports.verify = async (req, res) => {
   try {
     const userId = req.body.userId;
-
-    // Find all payment data for the user and sort them by createdAt date in descending order
     const paymentData = await Payment.find({ userId }).sort({ createdAt: -1 }).limit(1);
 
     if (!paymentData || paymentData.length === 0) {
       return res.status(404).json({ message: "Payment data not found" });
     }
 
-    // Return the latest payment data
     res.status(200).json(paymentData[0]);
   } catch (error) {
     console.error('Error fetching payment data:', error);

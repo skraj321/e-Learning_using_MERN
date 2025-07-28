@@ -20,8 +20,6 @@ router.get("/user-auth",auth,(req,res)=>{
     res.status(200).json({ok: true});
 });
 
-
-
 router.get("/admin",userctrl.admin);
 
     

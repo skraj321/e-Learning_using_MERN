@@ -7,6 +7,7 @@ const UserCollection=require("./models/usermodel");
 const cors=require("cors");
 const path=require("path");
 require("./db/conn");
+require("dotenv").config();
 const authRouter=require("./routes/userrouter");
 const courseRouter=require("./routes/courserouter");
 const paymentRouter=require("./routes/paymentrouter");
@@ -15,7 +16,7 @@ app.use(cors({
     origin: ["http://localhost:3000", "https://e-learning-using-mern-6tzb.vercel.app"],
     credentials: true
 }))
-const PORT=3800;
+const PORT = process.env.PORT || 3800;
 app.set("view engine","ejs");
 app.use(express.json());
 app.use(cookieParser());
@@ -31,22 +32,6 @@ app.use("/payment",paymentRouter);
 
 app.use(express.urlencoded({ extended: true}));
 app.use(bodyParser.urlencoded({ extended: true}));
-
-
-// app.post("/regist",async(req,res)=>{
-//     try{
-//         const name=req.body.name;
-        
-//         const userdata=new UserCollection({name});
-//         const user=await userdata.save();
-//         console.log(user);
-
-        
-
-//     }catch(e){
-//         res.send(e);
-//     }
-// })
 
 app.listen(PORT,()=>{
     console.log(`connection at port no: ${PORT}`)
