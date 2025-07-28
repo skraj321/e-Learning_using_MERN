@@ -14,6 +14,10 @@ exports.register = async (req, res) => {
         if(!username || !email || !password || !confirmPassword)
         return res.status(401).json({msg: "all fields are required"})
         if (password === confirmPassword) {
+            const existingUser = await UserCollection.findOne({email});
+            if(existingUser){
+                return res.status(401).json({msg: "user already exists!"});
+            }
             const userdata = new UserCollection({username, email, password, confirmPassword });
             const token=await  userdata.generateToken();
             res.cookie("token",token,{

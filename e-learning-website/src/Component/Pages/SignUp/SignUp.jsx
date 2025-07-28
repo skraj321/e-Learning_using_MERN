@@ -30,12 +30,21 @@ const SignUp = () => {
     setEmailError(isValid ? "" : "Invalid email address");
     return isValid;
   };
+  
 
   const validatePassword = () => {
     if (formData.password !== formData.confirmPassword) {
       setPasswordError("Passwords do not match");
       return false;
     }
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+  if (!passwordRegex.test(formData.password)) {
+    setPasswordError(
+      "Password must be at least 6 characters with one uppercase and one lowercase letter"
+    );
+    return false;
+  }
+
     setPasswordError("");
     return true;
   };
@@ -55,11 +64,21 @@ const SignUp = () => {
         body: JSON.stringify(formData),
       });
 
-      if (!response.ok) {
-        throw new Error("Sign up failed");
-      }
 
       const data = await response.json();
+      if (!response.ok) {
+      // handle specific backend error
+      if (data.msg === "user already exists!") {
+        alert("User already exists!");
+      } else if (data.msg === "password do not match!") {
+        alert("Passwords do not match!");
+      } else if (data.msg === "all fields are required") {
+        alert("Please fill all required fields");
+      } else {
+        alert("Sign up failed!");
+      }
+      return;
+    }
       
       console.log(data);
       

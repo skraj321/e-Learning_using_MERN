@@ -35,14 +35,6 @@ const SignIn = () => {
       valid = false;
     }
 
-    // Password strength check
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
-    if (!formData.password || !passwordRegex.test(formData.password)) {
-      newErrors.password =
-        "Password must be at least 6 characters with at least one uppercase and one lowercase letter";
-      valid = false;
-    }
-
     setErrors(newErrors);
     return valid;
   };
