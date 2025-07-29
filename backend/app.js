@@ -13,9 +13,13 @@ const courseRouter=require("./routes/courserouter");
 const paymentRouter=require("./routes/paymentrouter");
 const auth=require("./middleware/authMid")
 app.use(cors({
-    origin: ["http://localhost:3000", "https://e-learning-using-mern-r476.vercel.app/"],
-    credentials: true
-}))
+  origin: [
+    "http://localhost:3000",
+    "https://e-learning-using-mern-6tzb.vercel.app",
+    "https://e-learning-using-mern-r476.vercel.app", 
+  ],
+  credentials: true
+}));
 const PORT = process.env.PORT || 3800;
 app.set("view engine","ejs");
 app.use(express.json());
