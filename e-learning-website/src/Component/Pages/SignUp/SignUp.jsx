@@ -80,7 +80,7 @@ const SignUp = () => {
       return;
     }
       
-      console.log(data);
+      // console.log(data);
       
       alert("Sign up successful!");
       navigate("/sign-in");

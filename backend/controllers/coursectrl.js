@@ -23,7 +23,6 @@ exports.getCourse=async(req,res)=>{
         if(data.length>0){
             res.status(201).json({msg:"found successfully",data})
             console.log("Connected to db")
-            console.log(data);
         }else{
             res.status(401).json({code: 500,msg:"server error"})
         }

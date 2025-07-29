@@ -175,7 +175,7 @@ export default function DrawerAppBar(props) {
             ))}
           </Box>
 
-          <div style={{ paddingRight: "10px" }}>
+          <div style={{ paddingRight: "10px"}}>
             <Link to="/cart">
               <IconButton
                 aria-label="cart"

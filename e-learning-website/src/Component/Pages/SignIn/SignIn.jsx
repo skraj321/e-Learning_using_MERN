@@ -63,7 +63,7 @@ const SignIn = () => {
   
         // Handle successful login response
        
-        console.log(data);
+        // console.log(data);
         
         alert("Login successful!");
         setAuth({

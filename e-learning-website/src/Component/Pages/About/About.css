@@ -1,43 +1,50 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+/* === ABOUT US HERO SECTION === */
 .aboutus {
+  position: relative;
   text-align: center;
-  padding: 200px;
-  height: 150px;
+  height: 350px;
   background-image: url("/public/image1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: rgb(230, 230, 219);
-  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
-.about h1 {
-  font-size: 30px;
+
+.aboutus h1 {
+  font-size: 36px;
   font-weight: bold;
-  margin-top: 70px;
+  margin-bottom: 10px;
 }
-.about h2{
+
+.aboutus h2 {
+  font-size: 24px;
   color: yellow;
 }
 
-
-.maincard1{
+/* === INSTRUCTORS CARD SECTION === */
+.maincard1 {
   display: flex;
-  flex-direction: row;
-  padding: 25px;
-  
-  justify-content: space-between;
-  
   flex-wrap: wrap;
-  
+  justify-content: center;
+  padding: 25px;
+  gap: 20px;
 }
+
 .card1 {
   width: 22%;
+  min-width: 260px;
   text-align: center;
-  margin: 15px;
- 
   padding: 15px;
   border: none;
   border-radius: 25%;
@@ -47,7 +54,7 @@
 
 .profile-image {
   border-radius: 50%;
-  border: 1px solid  rgb(13, 151, 160);
+  border: 1px solid rgb(13, 151, 160);
   width: 250px;
   height: 250px;
   object-fit: cover;
@@ -59,7 +66,8 @@
   font-weight: bold;
   margin-bottom: 7px;
 }
-.expert{
+
+.expert {
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 7px;
@@ -68,10 +76,6 @@
 .social {
   display: flex;
   justify-content: center;
-}
-.social-icon{
-  width: 225px;
-  height: 15px;
 }
 
 .social a {
@@ -91,56 +95,37 @@
 .social a:hover {
   background-color: #0056b3;
 }
-@media only screen and (max-width: 1200px) {
-  .card {
-    width: calc(33.33% - 20px);
-    
-  }
-}
 
-@media only screen and (max-width: 768px) {
-  .card {
-    
-    width: 40%;
-  text-align: center;
-  margin: 20px;
-  margin-right: 32px;
-  padding: 10px;
-  border: none;
-  border-radius: 25%;
-  box-shadow: 1px 6px 10px rgba(102, 44, 203, 0.1);
-  background-color: #fff;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .card {
-    width: calc(100% - 20px);
-  }
-}
+/* === ABOUT US CONTAINER SECTION === */
 .aboutus-container {
   text-align: center;
-  padding: 100px;
+  padding: 60px 20px;
   background-color: rgb(49, 96, 97);
   color: #fff;
 }
+
 .aboutus-container h2 {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 100;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: burlywood;
 }
+
+/* === IMAGE & OUR STORY === */
 .img-container {
   display: flex;
   justify-content: center;
-  padding: 50px;
-  flex-direction: row;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .picture {
-  margin-right: 20px;
   flex: 1;
+  min-width: 280px;
 }
+
 .image-container {
   position: relative;
 }
@@ -151,57 +136,37 @@
   padding: 5px;
   font-weight: bold;
 }
-@media (max-width: 768px) {
-  .img-container {
-    flex-direction: column;
-  }
-}
 
 .our-story {
   text-align: center;
   flex: 1;
   padding: 20px;
-  height: auto;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  
 }
-.our-story p{
+
+.our-story p {
   padding: 30px;
   text-align: justify;
 }
-.vision-container {
+
+/* === VISION & MISSION === */
+.vision-container, .mission-container {
   display: flex;
-  width: 100%;
-  max-width: 1200px;
   flex-wrap: wrap;
-  text-align: justify;
   justify-content: space-around;
-}
-.our-vision {
-  flex: 1;
-  padding: 40px;
-}
-.vision {
- 
-  flex: 1;
-  padding: 40px;
-  flex-wrap: wrap;
-}
-.mission-container {
-  display: flex;
-  width: 100%;
   max-width: 1200px;
-  text-align: justify;
-}
-.our-mission {
-  flex: 1;
-  padding: 40px;
-}
-.mission {
-  flex: 1;
-  padding: 40px;
+  width: 100%;
+  margin: 0 auto;
 }
 
+.our-vision, .vision, .our-mission, .mission {
+  flex: 1;
+  min-width: 280px;
+  padding: 40px;
+  text-align: justify;
+}
+
+/* === INSTRUCTOR WRAPPER === */
 .instructor-container {
   display: flex;
   flex-direction: column;
@@ -209,28 +174,87 @@
   padding: 20px;
 }
 
+/* === MEDIA QUERIES === */
+@media only screen and (max-width: 1024px) {
+  .aboutus {
+    height: 300px;
+    padding: 40px 10px;
+  }
 
+  .aboutus h1 {
+    font-size: 28px;
+  }
 
+  .aboutus h2 {
+    font-size: 18px;
+  }
 
+  .profile-image {
+    width: 200px;
+    height: 200px;
+  }
 
+  .card1 {
+    width: 45%;
+  }
+}
 
+@media only screen and (max-width: 768px) {
+  .aboutus {
+    height: 280px;
+    padding: 30px 10px;
+  }
 
+  .aboutus h1 {
+    font-size: 24px;
+  }
 
+  .aboutus h2 {
+    font-size: 16px;
+  }
 
+  .card1 {
+    width: 80%;
+  }
 
+  .our-story p {
+    padding: 15px;
+  }
+}
 
+@media only screen and (max-width: 576px) {
+  .aboutus {
+    height: 250px;
+    padding: 20px 10px;
+  }
 
+  .aboutus h1 {
+    font-size: 20px;
+  }
 
+  .aboutus h2 {
+    font-size: 14px;
+  }
 
+  .maincard1 {
+    gap: 15px;
+  }
 
+  .card1 {
+    width: 90%;
+  }
 
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
 
+  .vision-container, .mission-container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
 
-
-
-
-
-
-
-
-
+  .our-vision, .vision, .our-mission, .mission {
+    padding: 20px;
+  }
+}

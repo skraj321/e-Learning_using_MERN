@@ -47,8 +47,12 @@ const Contact = () => {
     if (!validateEmail()) {
       return;
     }
-    console.log(formData);
     alert("Message sent!");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   const validateEmail = () => {

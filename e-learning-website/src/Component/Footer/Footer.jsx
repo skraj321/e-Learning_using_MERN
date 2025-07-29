@@ -40,10 +40,10 @@ export const Footer = () => {
                 1st Main Road, Hebbal Kempapura, Bangalore
               </Typography>
               <Typography variant="body2" color="white">
-                raghavkashyap@gmail.com <br /> sk8651245603@gmail.com
+                sahebkumar2812@gmail.com <br />raghavkashyap@gmail.com
               </Typography>
               <Typography variant="body2" color="white">
-                Phone: +91 7079483509
+                Phone: +91 7079XXXX09
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>

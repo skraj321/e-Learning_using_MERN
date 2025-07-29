@@ -38,8 +38,8 @@ const Courses = () => {
     if (userId == null) {
       navigate("/sign-in");
     } else {
-      console.log("Product Id:", productId);
-      console.log("User Id:", userId);
+      // console.log("Product Id:", productId);
+      // console.log("User Id:", userId);
 
       fetch(`${process.env.REACT_APP_API_BASE_URL}/user/add-to-cart`, {
         method: "POST",
