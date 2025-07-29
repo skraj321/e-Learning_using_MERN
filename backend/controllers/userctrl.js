@@ -49,7 +49,7 @@ exports.login=async(req,res)=>{
         const isMatch=await bcrypt.compare(password,useremail.password);
         const token=await  useremail.generateToken();
             res.cookie("token",token,{
-                
+                 maxAge: 2 * 60 * 60 * 1000,
                 httpOnly:true
             });
         if(isMatch){
