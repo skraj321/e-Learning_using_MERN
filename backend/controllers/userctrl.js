@@ -21,7 +21,7 @@ exports.register = async (req, res) => {
             const userdata = new UserCollection({username, email, password, confirmPassword });
             const token=await  userdata.generateToken();
             res.cookie("token",token,{
-                
+                maxAge: 2 * 60 * 60 * 1000,
                 httpOnly:true
             });
             const userd= await userdata.save();
