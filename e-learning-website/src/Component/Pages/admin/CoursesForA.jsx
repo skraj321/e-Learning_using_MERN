@@ -73,7 +73,7 @@ const CoursesForA = () => {
                     <h3 className="title">{item.title}</h3>
                     <p className="ins">{item.briefDes || "N/A"}</p>
                     <p className="ins">{item.instructor || "N/A"}</p>
-                    <p className="prc">₹{item.price || "N/A"} </p>
+                    <p className="prc">${item.price || "N/A"} </p>
                   </div>
                   <div className="course-actions">
                     <a href="/">
